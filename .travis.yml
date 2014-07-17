@@ -6,8 +6,8 @@ php:
 services:
   - memcached
 
-before_install:
- - phpenv config-add tests/memcache.ini
+#before_install:
+# - phpenv config-add tests/memcache.ini
 
 before_script:
  #- git clone -q https://github.com/phalcon/cphalcon.git
