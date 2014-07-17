@@ -1,0 +1,18 @@
+language: php
+php:
+  - 5.3
+  - 5.4
+
+services:
+  - memcached
+
+before_install:
+ - phpenv config-add tests/memcache.ini
+
+before_script:
+ #- git clone -q https://github.com/phalcon/cphalcon.git
+ - (cd cphalcon; git submodule update; cd build; sudo ./install && phpenv config-add ../../tests/phalcon.ini)
+ - wget http://getcomposer.org/composer.phar
+ - php composer.phar install
+
+script: (cd tests; phpunit --debug)
