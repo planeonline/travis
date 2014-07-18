@@ -1,6 +1,7 @@
-language: php
+language: 
+  - php
+  - c
 php:
-#  - 5.3
   - 5.4
 
 services:
