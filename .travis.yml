@@ -10,6 +10,10 @@ services:
 before_install:
   - ./cphalcon/unit-tests/ci/install_prereqs.sh
 
+install:
+ - (cd cphalcon)
+ - composer --prefer-source install
+
 before_script:
 #- git clone -q https://github.com/phalcon/cphalcon.git
 # - (cd cphalcon; git submodule update; cd build; sudo ./install && phpenv config-add ../../tests/phalcon.ini)
