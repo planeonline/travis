@@ -18,7 +18,7 @@ before_script:
 #- git clone -q https://github.com/phalcon/cphalcon.git
 # - (cd cphalcon; git submodule update; cd build; sudo ./install && phpenv config-add ../../tests/phalcon.ini)
 #  - yum install php-devel
-  - apt-get install php5-dev
+  - sudo apt-get -qq install php5-dev
   - (cd cphalcon/build; sudo ./travis-install && phpenv config-add ../../config/php.d/phalcon.ini)
 # - wget http://getcomposer.org/composer.phar
 # - php composer.phar install
