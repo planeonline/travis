@@ -1,11 +1,8 @@
 language: 
   - php
-  - c
+    
 php:
   - 5.4
-
-services:
-# - memcached
 
 before_install:
 
